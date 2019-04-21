@@ -23,7 +23,9 @@ class Screen2 extends StatelessWidget {
                     //Previous
                     //Navigator.pop(context);
                     //Pop-to-Root-ViewController
-                    Navigator.popUntil(context, ModalRoute.withName('/'));
+                    //Navigator.popUntil(context, ModalRoute.withName('/'));
+                    Navigator.popUntil(
+                        context, (Route<dynamic> route) => route.isFirst);
                   },
                 ),
               ]),
