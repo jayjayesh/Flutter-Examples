@@ -1,5 +1,5 @@
-import 'package:day_01_json_modal_class/Screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:day_01_json_modal_class/Screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
