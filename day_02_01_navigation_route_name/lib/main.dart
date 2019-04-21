@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'screen1.dart';
 import 'screen2.dart';
 import 'screen3.dart';
+import 'screen4.dart';
+import 'ScreenArguments.dart';
 
 void main() => runApp(MyApp());
 
@@ -48,12 +50,24 @@ class MyApp extends StatelessWidget {
             );
             return MaterialPageRoute(builder: (context) => page);
             break;
+
+          case Screen3.routeName:
+            // Cast the arguments to the correct type: ScreenArguments.
+            final ScreenArguments args = settings.arguments;
+            page = Screen3(
+              passDataString1: args.passData1,
+              passDataStringType2: args.passData2,
+            );
+            return MaterialPageRoute(builder: (context) => page);
+            break;
         }
       },
       onUnknownRoute: (RouteSettings settings) {
         var page;
-        page = Screen3(
-          passData: settings.arguments,
+        page = Screen4(
+          //passData: settings.arguments,
+          passData:
+              'Unknown Route = You have been push screen(), which has Unknown route',
         );
         return MaterialPageRoute(builder: (context) => page);
       },

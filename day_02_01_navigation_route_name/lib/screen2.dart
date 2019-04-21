@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'screen3.dart';
+import 'ScreenArguments.dart';
 
 class Screen2 extends StatelessWidget {
   static const String routeName = "/screen2";
@@ -25,11 +27,11 @@ class Screen2 extends StatelessWidget {
                 ),
               ),
               RaisedButton(
-                child: Text('Pop to Home Screen'),
+                child: Text('Go to Screen 3'),
                 onPressed: () {
-                  //Navigator.pop(context);
-                  Navigator.popUntil(
-                      context, (Route<dynamic> route) => route.isFirst);
+                  Navigator.pushNamed(context, Screen3.routeName,
+                      arguments:
+                          ScreenArguments('test string1', [1, 2, 3, 4, 5]));
                 },
               ),
             ],
