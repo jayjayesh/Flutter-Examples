@@ -1,6 +1,34 @@
 import 'package:flutter/material.dart';
 
-class article {
+/*
+class ArticleAPIResponce {
+
+  final String status;
+  final int totalResults;
+  final [Article] arrAllArticles;
+
+    ArticleAPIResponce(
+      this.status,
+      this.totalResults,
+      this.arrAllArticles,
+    );
+
+factory ArticleAPIResponce.fromJson(Map<String, dynamic> json) {
+    if (json == null) {
+      throw FormatException("Null JSON provided to (ArticleAPIResponce)");
+    }
+
+    return ArticleAPIResponce(
+       status: json['status'] as String,
+       totalResults: json['totalResults'] as int,
+       arrAllArticles: json['articles'] as [Article],
+       );
+  }
+
+}
+*/
+
+class Article {
   final String title;
   final String description;
   final String author;
@@ -10,7 +38,7 @@ class article {
   final String publishAt;
   final Source source;
 
-  article(
+  Article(
       {this.title,
       this.description,
       this.author,
@@ -20,12 +48,12 @@ class article {
       this.publishAt,
       this.source});
 
-  factory article.fromJson(Map<String, dynamic> json) {
+  factory Article.fromJson(Map<String, dynamic> json) {
     if (json == null) {
-      throw FormatException("Null JSON provided to SimpleObject");
+      throw FormatException("Null JSON provided to (Article)");
     }
 
-    return article(
+    return Article(
       title: json['title'] as String,
       description: json['description'] as String,
       author: json['author'] as String,
@@ -46,7 +74,7 @@ class Source {
 
   factory Source.fromJson(Map<String, dynamic> json) {
     if (json == null) {
-      throw FormatException("Null JSON provided to SimpleObject");
+      throw FormatException("Null JSON provided to (Source)");
     }
 
     return Source(id: json['id'] as String, name: json['name'] as String);
