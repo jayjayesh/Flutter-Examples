@@ -32,8 +32,10 @@ class Screen3 extends StatelessWidget {
                 child: Text('Pop to Home Screen'),
                 onPressed: () {
                   //Navigator.pop(context);
-                  Navigator.popUntil(
-                      context, (Route<dynamic> route) => route.isFirst);
+                  //Navigator.popUntil(context, (Route<dynamic> route) => route.isFirst);
+                  //Navigator.popUntil(context, ModalRoute.withName('/'));
+                    Navigator.popUntil(context,
+                        ModalRoute.withName(Navigator.defaultRouteName));
                 },
               ),
             ],
