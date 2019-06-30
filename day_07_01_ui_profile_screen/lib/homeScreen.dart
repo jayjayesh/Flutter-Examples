@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             InfoBox('test@test.com', Icons.email),
-            InfoBox('123-456-789', Icons.phone)
+            InfoBox('123-456-789', Icons.phone),
           ],
         ),
       ),
