@@ -1,0 +1,6 @@
+framework module Pods_AddFlutterToExistingIOSApp {
+  umbrella header "Pods-AddFlutterToExistingIOSApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
