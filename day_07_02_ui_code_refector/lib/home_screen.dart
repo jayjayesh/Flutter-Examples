@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
 
+//Use privet method (underscore) before method name
+//privet method can not use outside of this class
   Widget _myBox(String titleThatPassed, Color colorThatPassed) {
     return Container(
       decoration: BoxDecoration(color: colorThatPassed),
