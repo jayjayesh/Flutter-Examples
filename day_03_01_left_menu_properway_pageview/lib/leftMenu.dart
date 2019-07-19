@@ -94,7 +94,7 @@ Widget leftMenuDrawer(BuildContext context, List arrLeftMenuItems,
         ),
         */
         UserAccountsDrawerHeader(
-          decoration: BoxDecoration(color: Colors.blueAccent),
+          //decoration: BoxDecoration(color: Colors.red),
           accountName: Text('Jayesh Lathiya'),
           accountEmail: Text('jayeshlathiya@gmail.com'),
           currentAccountPicture: CircleAvatar(
@@ -104,11 +104,8 @@ Widget leftMenuDrawer(BuildContext context, List arrLeftMenuItems,
             backgroundImage: NetworkImage('https://i.pravatar.cc/150?img=12'),
           ),
           otherAccountsPictures: <Widget>[
-            IconButton(
-              icon: Icon(FontAwesomeIcons.plusSquare),
-              onPressed: () {
-                print('Add new Account');
-              },
+            CircleAvatar(
+              backgroundImage: NetworkImage('https://i.pravatar.cc/150?img=13'),
             )
           ],
         ),
