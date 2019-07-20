@@ -127,6 +127,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       //_counter = sharedPrefObj.getInt(keyPrefrenceCounter) ?? 0;
                       SharedPreferencesHelper.getCounter().then((int value) {
                         _counter = value;
+                      }, onError: (error) {
+                        print(error);
                       });
                     });
                   },
