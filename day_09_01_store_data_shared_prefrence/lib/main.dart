@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'SharedPreferencesHelper.dart';
 
 void main() => runApp(MyApp());
 
@@ -106,10 +107,13 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 RaisedButton(
                   child: Text('Save'),
-                  onPressed: () async {
+                  /*onPressed: () async {
                     SharedPreferences sharedPrefObj =
                         await SharedPreferences.getInstance();
                     sharedPrefObj.setInt(keyPrefrenceCounter, _counter);
+                  },*/
+                  onPressed: () {
+                    SharedPreferencesHelper.setCounter(_counter);
                   },
                 ),
                 SizedBox(
@@ -118,10 +122,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 RaisedButton(
                   child: Text('Get'),
                   onPressed: () async {
-                    SharedPreferences sharedPrefObj =
-                        await SharedPreferences.getInstance();
+                    //SharedPreferences sharedPrefObj = await SharedPreferences.getInstance();
                     setState(() {
-                      _counter = sharedPrefObj.getInt(keyPrefrenceCounter) ?? 0;
+                      //_counter = sharedPrefObj.getInt(keyPrefrenceCounter) ?? 0;
+                      SharedPreferencesHelper.getCounter().then((int value) {
+                        _counter = value;
+                      });
                     });
                   },
                 ),
