@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: ChangeNotifierProvider(
-        builder: (_) {
+        builder: (BuildContext context) {
+          // Initialise  CounterClass here
           return CounterClass(0);
         },
-        child: homeScreen(),
+        child: HomeScreen(),
       ),
     );
   }

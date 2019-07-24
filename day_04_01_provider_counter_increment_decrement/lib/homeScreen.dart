@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'counter.dart';
 
-class homeScreen extends StatelessWidget {
+//make sure Class name should start with capital latter
+class HomeScreen extends StatelessWidget {
   static const String routeName = "/homeScreen";
   final passData;
 
-  homeScreen({this.passData});
+  HomeScreen({this.passData});
 
   @override
   Widget build(BuildContext context) {
