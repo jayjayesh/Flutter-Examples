@@ -1,17 +1,15 @@
-import 'package:day_05_01_login_firebase_google_signin/screens/loginScreen.dart';
+import 'package:day_07_05_ui_simple_login_screen/loginScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  return runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: LoginScreen(),
     );
   }
