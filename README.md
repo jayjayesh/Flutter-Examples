@@ -6,4 +6,4 @@ day_07_04_ui_textfield_predict_gender
 
 
 day_07_05_ui_simple_login_screen
---> Textfield next focus, Email validation, Secure Text,
+--> Textfield next focus, Email validation, Secure Text, FIX:SneakBar does not show Solved by (new Build) widget and Creating object of Scafold_Context,
