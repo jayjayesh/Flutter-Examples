@@ -6,7 +6,7 @@
 //?  Fix Application in portrait mode
 //?  Load assets images
 //?  Load custom fonts
-
+//?  App const  [ define base_url, images, fonts, shared_prefrence, all_strings, ]
 
 
 

@@ -1,3 +1,4 @@
+import 'package:day_00_01_home_screen/utils/yourAppName.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,13 +20,13 @@ class HomeScreen extends StatelessWidget {
               Text(
                 'Text Custom font family',
                 style: TextStyle(
-                  fontFamily: 'google-sans-cufonfonts',
+                  fontFamily: YourAppName.font_google_sans_family,
                   fontWeight: FontWeight.bold,
                   fontSize: 18.0,
                 ),
               ),
               Image.asset(
-                'assets/images/girl.jpg',
+                YourAppName.img_girl,
                 width: 100,
                 height: 100,
                 fit: BoxFit.cover,
@@ -34,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                 height: 10,
               ),
               Image.asset(
-                'assets/images/bird.jpg',
+                YourAppName.img_bird,
                 width: 100,
                 height: 100,
                 fit: BoxFit.cover,
@@ -43,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                 height: 10,
               ),
               Image.asset(
-                'assets/images/flower.jpg',
+                YourAppName.img_flower,
                 width: 100,
                 height: 100,
                 fit: BoxFit.cover,
