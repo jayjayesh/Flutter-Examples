@@ -1,9 +1,13 @@
 /**
  
 //TODO: day_00_01_home_screen
-//?  Basic Library (Cocoa pods)
+//?  All Basic Library (Cocoa pods)
+//?  Change StatusBar color
+//?  Fix Application in portrait mode
 //?  Load assets images
 //?  Load custom fonts
+
+
 
 
 //TODO: day_03_01_left_menu_properway_pageview
