@@ -1,31 +1,42 @@
 import 'package:flutter/material.dart';
 
-//TODO: This CustomeAppBar is not working
-class CustomeAppBar extends StatelessWidget {
+ //! Must include inside Material App, Otherwise it will Black/Blank screenclass CustomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
       elevation: 10.0,
       child: Container(
-        height: 50.0,
+        height: 100.0,
         color: Colors.lightBlue,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: Column(
           children: <Widget>[
-            Expanded(
-              child: Text(
-                'Title',
-                textDirection: TextDirection.ltr,
-              ),
+            Container(
+              height: 50.0,
+              //color: Colors.red,
             ),
-            FlatButton(
-              child: Icon(Icons.search),
-              onPressed: null,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(
+                  width: 15.0,
+                ),
+                Expanded(
+                  child: Text(
+                    'Title',
+                    textDirection: TextDirection.ltr,
+                    style: TextStyle(fontSize: 18.0),
+                  ),
+                ),
+                FlatButton(
+                  child: Icon(Icons.search),
+                  onPressed: null,
+                ),
+                SizedBox(
+                  width: 5.0,
+                )
+              ],
             ),
-            SizedBox(
-              width: 10.0,
-            )
           ],
         ),
       ),
