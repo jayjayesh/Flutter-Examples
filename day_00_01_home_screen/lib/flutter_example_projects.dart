@@ -15,7 +15,7 @@
 
 
 //TODO: day_07_06_ui_essensial_custome_widget
-//?  Draw Custome AppBar (For that perticular screen) 
+//?  Custome AppBar (For that perticular screen) 
 
 
 //TODO: day_07_04_ui_textfield_predict_gender
