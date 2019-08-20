@@ -1,5 +1,7 @@
 import 'package:day_00_01_home_screen/utils/yourAppName.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -12,8 +14,7 @@ class HomeScreen extends StatelessWidget {
         height: double.infinity,
         width: double.infinity,
         color: Colors.yellow[100],
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+        child: Column( mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text('Hi Check'),
