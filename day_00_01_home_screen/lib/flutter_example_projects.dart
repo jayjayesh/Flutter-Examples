@@ -14,6 +14,9 @@
 //?  Pageview, LeftMenu
 
 
+//TODO: day_07_06_ui_essensial_custome_widget
+//?  Custome AppBar (For that perticular screen) 
+
 
 //TODO: day_07_04_ui_textfield_predict_gender
 //?  Textfield, Check-Internet conectivity, 
