@@ -1,20 +1,22 @@
+import 'package:day_00_01_home_screen/utils/strings.dart';
 import 'package:day_00_01_home_screen/utils/yourAppName.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-
+import 'package:quiver/strings.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: Text(AllStrings.strHomeScreen),
       ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
         color: Colors.yellow[100],
-        child: Column( mainAxisAlignment: MainAxisAlignment.center,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text('Hi Check'),
