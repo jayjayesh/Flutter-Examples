@@ -1,6 +1,6 @@
 # day_07_08_ui_tab_bar_setup
 
-What i have learn
+## What i have learn
 - (1) BottomTabBar setup
 - (2) Align child widget (Text) inside container
 
