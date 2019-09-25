@@ -1,8 +1,8 @@
 # day_07_08_ui_tab_bar_setup
 
 What i have learn
-(1) TabBar setup
-(2) Align child widget (Text) inside container
+- TabBar setup
+- Align child widget (Text) inside container
 
 
 ## Getting Started
