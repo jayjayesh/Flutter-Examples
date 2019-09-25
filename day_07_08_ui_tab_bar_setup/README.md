@@ -1,6 +1,9 @@
 # day_07_08_ui_tab_bar_setup
 
-A new Flutter project.
+What i have learn
+(1) TabBar setup
+(2) Align child widget (Text) inside container
+
 
 ## Getting Started
 
