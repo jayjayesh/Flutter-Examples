@@ -3,7 +3,8 @@
 ## What i have learn
 - (1) BottomTabBar setup
 - (2) Align child widget (Text) inside container
-
+- (3) Use of Spacer() widget to fill space
+- (4) Two diffrent UI approch using { Align() widget } { Spacer() widget } to get same result
 
 ## Getting Started
 
