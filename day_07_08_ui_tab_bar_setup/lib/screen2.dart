@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/*
 class Screen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,6 +11,30 @@ class Screen2 extends StatelessWidget {
         child: Text(
           'Screen2',
           style: TextStyle(fontSize: 30, backgroundColor: Colors.yellow),
+        ),
+      ),
+    );
+  }
+}
+*/
+
+//! Spacer() widget use
+class Screen2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: Container(
+        color: Colors.green,
+        child: Column(
+          children: <Widget>[
+            Spacer(),
+            Text(
+              'Screen2',
+              style: TextStyle(fontSize: 30, backgroundColor: Colors.yellow),
+            ),
+            Spacer(),
+          ],
         ),
       ),
     );
