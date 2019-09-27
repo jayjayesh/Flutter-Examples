@@ -1,12 +1,13 @@
 # day_07_08_ui_tab_bar_setup
 
 ## What i have learn
-- (1) BottomTabBar setup
-- (2) Align child widget (Text) inside container
-- (3) Use of Spacer() widget to fill space
-- (4) Two diffrent UI approch using { Align() widget } { Spacer() widget } to get same result
-- (5) Hex Colors
-- (6) AppTheme Colors  (PrimaryColor, accentColor, PrimaryColorBritness)
+- (1) Top_TabBar setup
+- (2) Bottom_TabBar setup
+- (3) Align child widget (Text) inside container
+- (4) Use of Spacer() widget to fill space
+- (5) Two diffrent UI approch using { Align() widget } { Spacer() widget } to get same result
+- (6) Hex Colors
+- (7) AppTheme Colors  (PrimaryColor, accentColor, PrimaryColorBritness)
 
 ## Getting Started
 
