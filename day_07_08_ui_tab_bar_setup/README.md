@@ -5,6 +5,8 @@
 - (2) Align child widget (Text) inside container
 - (3) Use of Spacer() widget to fill space
 - (4) Two diffrent UI approch using { Align() widget } { Spacer() widget } to get same result
+- (5) Hex Colors
+- (6) AppTheme Colors  (PrimaryColor, accentColor, PrimaryColorBritness)
 
 ## Getting Started
 
