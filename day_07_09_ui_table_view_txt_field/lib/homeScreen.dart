@@ -111,23 +111,25 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                     ),
                   ),
-                  FlatButton(
-                    color: Colors.blue,
-                    child: Text('Add'),
-                    onPressed: () {
-                      //Hide Keyboard
-                      FocusScope.of(context).unfocus();
+                  Builder(
+                    builder: (context) => FlatButton(
+                      color: Colors.blue,
+                      child: Text('Add'),
+                      onPressed: () {
+                        //Hide Keyboard
+                        FocusScope.of(context).unfocus();
 
-                      if (txtEditingCtrl.text.isEmpty) {
-                        Scaffold.of(context).showSnackBar(SnackBar(
-                          content: Text('Textfield is empty'),
-                          duration: Duration(seconds: 3),
-                        ));
-                      } else {
-                        _addNewProduct(txtEditingCtrl.text);
-                        txtEditingCtrl.clear();
-                      }
-                    },
+                        if (txtEditingCtrl.text.isEmpty) {
+                          Scaffold.of(context).showSnackBar(SnackBar(
+                            content: Text('Textfield is empty'),
+                            duration: Duration(seconds: 3),
+                          ));
+                        } else {
+                          _addNewProduct(txtEditingCtrl.text);
+                          txtEditingCtrl.clear();
+                        }
+                      },
+                    ),
                   ),
                   FlatButton(
                     color: Colors.white,

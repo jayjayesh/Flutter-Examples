@@ -6,6 +6,7 @@
 - (3) TextField (Return Keyboard) (Clear Text in Textfield)
 - (4) Scroll to Tableview Row
 - (5) How to create (ModelClass) 
+- (6) Solve SnackBar not shown on scafold (SnackBar crash)
 
 ## Getting Started
 
