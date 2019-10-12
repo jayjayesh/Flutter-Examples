@@ -1,16 +1,44 @@
-# day_00_01_home_screen
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## day_00_01_home_screen
+- All Basic Library (Cocoa pods)
+- Change StatusBar color
+- Fix Application in portrait mode
+- Load assets images
+- Load custom fonts
+- App const  [ define base_url, images, fonts, shared_prefrence, all_strings, ]
 
-A few resources to get you started if this is your first Flutter project:
+## day_03_01_left_menu_properway_pageview
+- Pageview, LeftMenu
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+## day_07_06_ui_essensial_custome_widget
+- Custome AppBar (For that perticular screen) 
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## day_07_04_ui_textfield_predict_gender
+- Textfield, Check-Internet conectivity, 
+- CallWebService (get) parse JSON-to-Map(Dictionary), 
+- FIX:SneakBar does not show inside onButtonPress method, 
+- FIX: textfield Hide Keyboard
+
+## day_07_05_ui_simple_login_screen
+- Textfield next focus, 
+- Email validation, Secure Text, 
+- FIX:SneakBar does not show Solved by (new Build) widget and Creating object of Scafold_Context, 
+
+## day_07_08_ui_tab_bar_setup
+- Top_TabBar setup
+- Bottom_TabBar setup
+- Align child widget (Text) inside container
+- Use of Spacer() widget to fill space
+- Two diffrent UI approch using { Align() widget } { Spacer() widget } to get same result
+- Hex Colors
+- AppTheme Colors (PrimaryColor, accentColor, PrimaryColorBritness)
+
+## day_07_09_ui_table_view_txt_field
+- Dynamic Add TableView (Listview.builder)
+- Extracted Row creation method
+- TextField (Return Keyboard) (Clear Text in Textfield)
+- Scroll to Tableview Row
+- How to create (ModelClass)
+- Solve SnackBar not shown on scafold (SnackBar crash)
