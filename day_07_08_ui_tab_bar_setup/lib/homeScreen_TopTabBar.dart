@@ -3,7 +3,27 @@ import './screen1.dart';
 import './screen2.dart';
 import './screen3.dart';
 
-class HomeScreenTopTabBar extends StatelessWidget {
+class HomeScreenTopTabBar extends StatefulWidget {
+  @override
+  _HomeScreenTopTabBarState createState() => _HomeScreenTopTabBarState();
+}
+
+class _HomeScreenTopTabBarState extends State<HomeScreenTopTabBar>
+    with SingleTickerProviderStateMixin {
+  TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 3, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _tabController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -11,8 +31,9 @@ class HomeScreenTopTabBar extends StatelessWidget {
       child: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            title: Text('TabBar_At_Top'),
+            title: Text('TabBar_At_Top_pepsi'),
             bottom: TabBar(
+              controller: _tabController,
               tabs: <Widget>[
                 Tab(icon: Icon(Icons.home)),
                 Tab(icon: Icon(Icons.favorite)),
@@ -21,6 +42,7 @@ class HomeScreenTopTabBar extends StatelessWidget {
             ),
           ),
           body: TabBarView(
+            controller: _tabController,
             children: <Widget>[
               Screen1(),
               Screen2(),
