@@ -20,10 +20,12 @@
 - CallWebService (get) parse JSON-to-Map(Dictionary), 
 - FIX:SneakBar does not show inside onButtonPress method, 
 - FIX: textfield Hide Keyboard
+- implemented (lableText, hintText, Border around textfiled)
 
 ## day_07_05_ui_simple_login_screen
 - Textfield next focus, 
 - Email validation, Secure Text, 
+- implemented (lableText, hintText, Border around textfiled)
 - FIX:SneakBar does not show Solved by (new Build) widget and Creating object of Scafold_Context, 
 
 ## day_07_08_ui_tab_bar_setup
@@ -39,6 +41,7 @@
 - Dynamic Add TableView (Listview.builder)
 - Extracted Row creation method
 - TextField (Return Keyboard) (Clear Text in Textfield)
+- implemented (lableText, hintText, Border around textfiled)
 - Scroll to Tableview Row
 - How to create (ModelClass)
 - Solve SnackBar not shown on scafold (SnackBar crash)
