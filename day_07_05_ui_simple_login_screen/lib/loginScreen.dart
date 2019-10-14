@@ -10,9 +10,15 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextStyle _textStyle =
       TextStyle(color: Colors.white, fontWeight: FontWeight.bold);
   final InputDecoration _inputDecorationEmail = InputDecoration(
-      labelText: 'Email', hintText: '', border: OutlineInputBorder());
+      labelText: "Email",
+      hintText: "lathiyaJay@gmail.com",
+      hintStyle: TextStyle(color: Colors.grey),
+      border: OutlineInputBorder());
   final InputDecoration _inputDecorationPassword = InputDecoration(
-      labelText: 'Password', hintText: '', border: OutlineInputBorder());
+      labelText: "Password",
+      hintText: "madhubani@paintings1947",
+      hintStyle: TextStyle(color: Colors.grey),
+      border: OutlineInputBorder());
   double _nSizeBoxHeight = 15.0;
   double _nMaterialButtonMinWidth = 190.0;
 
@@ -108,6 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   TextFormField(
                     controller: _textfieldControllerEmail,
+                    keyboardType: TextInputType.emailAddress,
                     focusNode: _focusNodeEmail,
                     textInputAction: TextInputAction.next,
                     onFieldSubmitted: (term) {
