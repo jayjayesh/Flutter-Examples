@@ -106,10 +106,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   Expanded(
                     child: TextField(
                       controller: txtEditingCtrl,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "Add here",
+                      ),
                       onSubmitted: (text) {
                         FocusScope.of(context).unfocus();
                       },
                     ),
+                  ),
+                  SizedBox(
+                    width: 10,
                   ),
                   Builder(
                     builder: (context) => FlatButton(
