@@ -59,8 +59,11 @@ class _HomeScreenClassState extends State<HomeScreenClass> {
                 child: TextField(
                   controller: textFieldController,
                   decoration: InputDecoration(
-                      hintText: 'name',
-                      hintStyle: TextStyle(color: Colors.grey)),
+                    labelText: "Hi",
+                    border: OutlineInputBorder(),
+                    hintText: 'Jayesh',
+                    hintStyle: TextStyle(color: Colors.grey),
+                  ),
                 ),
               ),
               Builder(
