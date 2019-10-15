@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class HomeSliverTableview extends StatefulWidget {
@@ -66,12 +67,12 @@ class _HomeSliverTableviewState extends State<HomeSliverTableview> {
             snap: false, //Shut on-off drasticly
             expandedHeight: 200,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text("News Article TableView"),
-              background: Image.network(
-                _urlNetworkImage,
-                fit: BoxFit.cover,
-              ),
-            ),
+                title: Text("News Article TableView"),
+                background: CachedNetworkImage(
+                  imageUrl: _urlNetworkImage,
+                  placeholder: (context, url) => CircularProgressIndicator(),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
+                )),
           ),
           getWidgetSliverFixedExtentList(), //SliverChildListDelegate = Listview  = Static Items
           SliverToBoxAdapter(
