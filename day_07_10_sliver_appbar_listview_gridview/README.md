@@ -8,6 +8,7 @@
 - decoration - BoxDecoration - Shedow
 - Hero animated navigation  // Show image Full Screen like whatsApp
 - CachedNetworkImage 
+- Learn How AppLifeCycle works
 
 ## Getting Started
 
