@@ -56,3 +56,4 @@
 - decoration - BoxDecoration - Shedow
 - Hero animated navigation // Show image Full Screen like whatsApp
 - CachedNetworkImage
+- App LifeCycle  (active)(Inactive)(foreground)(background)(suspended)
