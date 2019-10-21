@@ -15,8 +15,8 @@
             "request": "launch",
             "type": "dart",
             "args": [
-                // "--flavor",
-                // "dev",
+                "--flavor",
+                "dev",
                 "-t", // with -t or --target we define the starter point, the main.dart file.
                 "lib/main_dev.dart",
             ],
@@ -27,9 +27,9 @@
             "request": "launch",
             "type": "dart",
             "args": [
-                // "--flavor",
-                // "qa",
-                "-t",  // with -t or --target we define the starter point, the main.dart file.
+                "--flavor",
+                "qa",
+                "-t", // with -t or --target we define the starter point, the main.dart file.
                 "lib/main_qa.dart",
             ],
         },
@@ -39,8 +39,8 @@
             "request": "launch",
             "type": "dart",
             "args": [
-                // "--flavor",
-                // "production",
+                "--flavor",
+                "production",
                 "-t", // with -t or --target we define the starter point, the main.dart file.
                 "lib/main_production.dart",
             ],

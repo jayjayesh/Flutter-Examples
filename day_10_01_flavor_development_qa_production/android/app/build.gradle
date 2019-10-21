@@ -53,6 +53,23 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    flavorDimensions "flavors"
+    productFlavors {
+        dev {
+            dimension "flavors"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+        }
+        qa {
+            dimension "flavors"
+            applicationIdSuffix ".qa"
+            versionNameSuffix "-qa"
+        }
+        production {
+            dimension "flavors"
+        }
+}
 }
 
 flutter {
@@ -66,19 +83,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-flavorDimensions "flavors"
-productFlavors {
-    dev {
-        dimension "flavors"
-        applicationIdSuffix ".dev"
-        versionNameSuffix "-dev"
-    }
-    qa {
-        dimension "flavors"
-        applicationIdSuffix ".qa"
-        versionNameSuffix "-qa"
-    }
-    prod {
-        dimension "flavors"
-    }
-}
+
