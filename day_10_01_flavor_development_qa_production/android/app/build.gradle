@@ -60,14 +60,29 @@ android {
             dimension "flavors"
             applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
+            //? Configure this flavor specific app name published in Play Store
+            resValue "string", "flavored_app_name", "[Dev] AppFlavor"
+            //resValue "string", "app_name", "[Dev] AppFlavor"
+            //? Each flavor can have its own application Id. An 'applicationId' makes a app in Play Store unique
+            applicationId "com.appbits.flutterflavorproject.dev"
         }
         qa {
             dimension "flavors"
             applicationIdSuffix ".qa"
             versionNameSuffix "-qa"
+            //? Configure this flavor specific app name published in Play Store
+            resValue "string", "flavored_app_name", "[QA] AppFlavor"
+            // resValue "string", "app_name", "[QA] AppFlavor"
+            //? Each flavor can have its own application Id. An 'applicationId' makes a app in Play Store unique
+            applicationId "com.appbits.flutterflavorproject.qa"
         }
         production {
             dimension "flavors"
+            //? Configure this flavor specific app name published in Play Store
+            resValue "string", "flavored_app_name", "[prod] AppFlavor"
+            //resValue "string", "app_name", "[prod] AppFlavor"
+            //? Each flavor can have its own application Id. An 'applicationId' makes a app in Play Store unique
+            applicationId "com.appbits.flutterflavorproject"
         }
 }
 }
