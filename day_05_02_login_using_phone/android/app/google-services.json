@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1058405770096",
+    "firebase_url": "https://flutterauthphone.firebaseio.com",
+    "project_id": "flutterauthphone",
+    "storage_bucket": "flutterauthphone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058405770096:android:349f3c027b62f4a18de5b5",
+        "android_client_info": {
+          "package_name": "com.example.day_05_02_login_using_phone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058405770096-rp8pk3kebjs7kb78lcmgobn5r665clbr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwRDv2GLeLUIU2tXfQx0MzSEnbdl9q7yo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058405770096-rp8pk3kebjs7kb78lcmgobn5r665clbr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1058405770096-dbm4v67j636dqhsvhmbimpfb6omo2f70.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.day0502LoginUsingPhone"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
