@@ -36,6 +36,7 @@ class Screen1 extends StatelessWidget {
   _navigateAndDisplaySelectionData(BuildContext context) async {
     final var selectedData = await Navigator.pushNamed(context, Screen2.routeName);
     
+    // Most important to check for null, If you come back here without passing data : It may crash app
     if(selectedData != null)
     {
       print('$selectedData');
