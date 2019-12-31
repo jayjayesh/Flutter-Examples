@@ -34,14 +34,19 @@ class Screen1 extends StatelessWidget {
   }
 
   _navigateAndDisplaySelectionData(BuildContext context) async {
-    final selectedData = await Navigator.pushNamed(context, Screen2.routeName);
-    print('$selectedData');
-    //Scaffold.of(context).removeCurrentSnackBar();
-    //Scaffold.of(context).showSnackBar(SnackBar(
-    //   content: Text('$selectedData'),
-    //));
+    final var selectedData = await Navigator.pushNamed(context, Screen2.routeName);
+    
+    // Most important to check for null, If you come back here without passing data : It may crash app
+    if(selectedData != null)
+    {
+      print('$selectedData');
+      //Scaffold.of(context).removeCurrentSnackBar();
+      //Scaffold.of(context).showSnackBar(SnackBar(
+      //   content: Text('$selectedData'),
+      //));
 
-    showAlertDialog(context, 'My Title', 'You Selected : ($selectedData' + ')');
+      showAlertDialog(context, 'My Title', 'You Selected : ($selectedData' + ')');
+    }
   }
 
   @override

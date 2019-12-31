@@ -31,6 +31,19 @@ class MyApp extends StatelessWidget {
         MyHomePage.routeName: (context) => MyHomePage(),
         //Screen1.routeName: (context) => Screen1(),
         //Screen2.routeName: (context) => Screen2(),
+        
+        /*
+       (Type-1) : Route with forward slash (/),Then Must have one of the all routes should be ('/') without_name(initial route)   
+                 '/': (context) => MyHomePage(),
+                 '/Screen1': (context) => Screen1(),
+                 '/Screen2': (context) => Screen2(),
+                 
+       (Type-2) : Route without foward slash (/), Then you don't need any empty route just with ('/')
+                    'home': (context) => MyHomePage(),
+                    'Screen1': (context) => Screen1(),
+                    'Screen2': (context) => Screen2(),
+        */
+        
       },
       onGenerateRoute: (RouteSettings settings) {
         var page;
