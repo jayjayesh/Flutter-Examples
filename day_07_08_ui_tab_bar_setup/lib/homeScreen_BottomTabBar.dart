@@ -27,6 +27,9 @@ class _HomeScreenBottomTabBarState extends State<HomeScreenBottomTabBar> {
       ),
       body: _allTabBarScreens[_currentSelectedTabBarIndex],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        selectedFontSize: 50,
+        unselectedFontSize: 20,
         currentIndex: _currentSelectedTabBarIndex,
         onTap: onTabBarTap,
         items: [
