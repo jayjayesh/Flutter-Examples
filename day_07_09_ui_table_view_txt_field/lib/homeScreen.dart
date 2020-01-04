@@ -49,7 +49,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    super.initState();
+
     _allProducts.insert(0, ProductModel('Apple', Colors.blue, 1, false));
     _allProducts.insert(0, ProductModel('Ball', Colors.blue, 1, false));
     _allProducts.insert(0, ProductModel('Cat', Colors.blue, 1, false));
@@ -75,7 +76,6 @@ class _HomeScreenState extends State<HomeScreen> {
     _allProducts.insert(0, ProductModel('Xerox', Colors.blue, 1, false));
     _allProducts.insert(0, ProductModel('Yello', Colors.blue, 1, false));
     _allProducts.insert(0, ProductModel('Zee', Colors.blue, 1, false));
-    super.initState();
   }
 
   @override
