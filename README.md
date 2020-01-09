@@ -1,6 +1,6 @@
 # Flutter-Examples
 
-The goal of this project is to provide an ultimate collection of real world app's UIs. While I built Flutter UIKit for my own needs, it is also intented to showcase good app structure and a clean, well-organized Flutter codebase.
+The goal of this project is to provide an ultimate collection of real world app's UIs. While I built Flutter UI for my own needs, it is also intented to showcase good app structure and a clean, well-organized Flutter codebase.
 
 The source code is **100% Dart**, and everything resides in the [/lib] folder.
 
