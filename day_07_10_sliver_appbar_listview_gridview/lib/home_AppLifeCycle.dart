@@ -32,9 +32,10 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
       case AppLifecycleState.resumed:
         print("App resumed : app comes in foreground");
         break;
-      case AppLifecycleState.suspending:
+      case AppLifecycleState.detached:
         print("App Suspended : user have kill the app");
         break;
+      
     }
   }
 
