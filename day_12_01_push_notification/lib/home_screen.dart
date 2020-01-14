@@ -24,19 +24,19 @@ class _HomeScreenState extends State<HomeScreen> {
       onLaunch: (Map<String, dynamic> message) async {
         print('onLaunch called');
         setState(() {
-          _messageText = "Push Messaging message: $message";
+          _messageText = "Push Messaging message: \n $message";
         });
       },
       onResume: (Map<String, dynamic> message) async {
         print('onResume called');
         setState(() {
-          _messageText = "Push Messaging message: $message";
+          _messageText = "Push Messaging message: \n $message";
         });
       },
       onMessage: (Map<String, dynamic> message) async {
         print('onMessage called');
         setState(() {
-          _messageText = "Push Messaging message: $message";
+          _messageText = "Push Messaging message: \n $message";
         });
       },
     );
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _firebaseMessaging.getToken().then((token) async {
       assert(token != null);
       setState(() {
-        _homeScreenText = "Push Messaging token: $token";
+        _homeScreenText = "Push Messaging token: \n $token";
       });
       print('Token is = $token'); // Print the Token in Console
     });
@@ -65,17 +65,15 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text('Push Notification'),
       ),
-      body: Column(
-        children: <Widget>[
-          Center(
-            child: Text(_homeScreenText),
-          ),
-          Row(children: <Widget>[
-            Expanded(
-              child: Text(_messageText),
-            ),
-          ])
-        ],
+      body: Container(
+        padding: EdgeInsets.all(20),
+        child: Column(
+          children: <Widget>[
+            Text(_homeScreenText),
+            SizedBox(height: 20),
+            Text(_messageText),
+          ],
+        ),
       ),
     );
   }
