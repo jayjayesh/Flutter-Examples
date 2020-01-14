@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
     return ChangeNotifierProvider(
       create: (_) => themeProvider,
       child: Consumer<DarkThemeProvider>(
-        builder: (BuildContext context, value, Widget child) {
+        builder: (BuildContext context, themeProvider, Widget child) {
           return MaterialApp(
             theme: CustomeThemeData.themeData(
               isDarkTheme: themeProvider.darkTheme,
@@ -43,3 +43,39 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
+/*
+
+/// Simple way to swich between light-Dark Themes
+/// define both (theme) & (darkTheme)
+/// whene-ever user changes displayTheme from settingApp
+/// thene your app will change it automatically
+/// If you want to give this controll in your app (use above code)
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      home: MyHomePageTemp(),
+    );
+  }
+}
+
+class MyHomePageTemp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Theme demo'),
+      ),
+      body: Container(
+        alignment: Alignment.center,
+        child: Text('Hello World'),
+      ),
+    );
+  }
+}
+
+
+*/
