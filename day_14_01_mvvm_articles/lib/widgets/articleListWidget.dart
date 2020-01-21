@@ -11,7 +11,7 @@ class ListViewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      itemCount: articles.length,
+      itemCount: articles == null ? 0 : articles.length,
       separatorBuilder: (_, __) => Divider(),
       itemBuilder: (context, index) {
         final article = articles[index];
