@@ -1,4 +1,4 @@
-import 'package:day_07_03_ui_table_view_load_more/Components/AlertDialogForDismissCell.dart';
+import 'package:day_07_03_ui_table_view_load_more/widgets/AlertDialogForDismissCell.dart';
 import 'package:flutter/material.dart';
 
 List<String> listItems = [

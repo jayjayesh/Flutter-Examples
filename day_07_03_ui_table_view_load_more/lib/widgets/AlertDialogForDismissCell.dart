@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AlertDialogForDismissCell extends StatelessWidget {
-  AlertDialogForDismissCell({this.actionName});
   String actionName;
+  AlertDialogForDismissCell({this.actionName});
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +11,13 @@ class AlertDialogForDismissCell extends StatelessWidget {
       content: Text('Are you sure you want to $actionName?'),
       actions: <Widget>[
         FlatButton(
-          child: Text('Ok'),
+          child: Text('OK'),
           onPressed: () {
             Navigator.of(context).pop(true);
           },
         ),
         FlatButton(
-          child: Text('Cancel'),
+          child: Text('CANCEL'),
           onPressed: () {
             Navigator.of(context).pop(false);
           },
