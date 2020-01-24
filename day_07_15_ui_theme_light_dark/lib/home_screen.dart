@@ -2,6 +2,9 @@ import 'package:day_07_15_ui_theme_light_dark/dark_theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+final kSelectedDarkThemeString = 'Dark Theme';
+final kSelectedLightThemeString = 'Light Theme';
+
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -11,6 +14,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<DarkThemeProvider>(context);
+    String selectedThemeString = themeProvider.darkTheme == true
+        ? kSelectedDarkThemeString
+        : kSelectedLightThemeString;
 
     return Scaffold(
       appBar: AppBar(
@@ -21,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'You have selected : $selectedThemeString',
             ),
           ],
         ),

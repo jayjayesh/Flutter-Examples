@@ -32,6 +32,7 @@ class _MyAppState extends State<MyApp> {
       child: Consumer<DarkThemeProvider>(
         builder: (BuildContext context, themeProvider, Widget child) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: CustomeThemeData.themeData(
               isDarkTheme: themeProvider.darkTheme,
               context: context,
