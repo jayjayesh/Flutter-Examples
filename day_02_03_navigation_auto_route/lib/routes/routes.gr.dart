@@ -54,7 +54,7 @@ class Router {
         return PageRouteBuilder(
           pageBuilder: (ctx, animation, secondaryAnimation) => ThirdScreen(),
           settings: settings,
-          transitionsBuilder: TransitionsBuilders.zoomIn,
+          transitionsBuilder: TransitionsBuilders.fadeIn,
           transitionDuration: Duration(milliseconds: 200),
         );
       default:

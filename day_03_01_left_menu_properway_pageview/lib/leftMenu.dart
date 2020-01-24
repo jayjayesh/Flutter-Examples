@@ -21,17 +21,17 @@ class _LeftMenuScreenClassState extends State<LeftMenuScreenClass> {
     },
     {
       'icon': FontAwesomeIcons.inbox,
-      'name': 'screen1',
+      'name': 'Notification',
       'badge': 14,
     },
     {
       'icon': FontAwesomeIcons.archive,
-      'name': 'screen2',
+      'name': 'Settings',
       'badge': 0,
     },
     {
       'icon': FontAwesomeIcons.trash,
-      'name': 'screen3',
+      'name': 'Contact us',
       'badge': 0,
     },
   ];
@@ -95,8 +95,8 @@ Widget leftMenuDrawer(BuildContext context, List arrLeftMenuItems,
         */
         UserAccountsDrawerHeader(
           //decoration: BoxDecoration(color: Colors.red),
-          accountName: Text('Jayesh Lathiya'),
-          accountEmail: Text('jayeshlathiya@gmail.com'),
+          accountName: Text('Myrtice Tromp'),
+          accountEmail: Text('mrtromp@gmail.com'),
           currentAccountPicture: CircleAvatar(
             //This will not work
             //child: Image.network('https://i.pravatar.cc/150?img=12'),

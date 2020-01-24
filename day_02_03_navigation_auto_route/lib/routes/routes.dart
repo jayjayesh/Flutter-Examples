@@ -27,7 +27,7 @@ class $Router {
   SecondScreen secondScreen;
 
   @CustomRoute(
-    transitionsBuilder: TransitionsBuilders.zoomIn,
+    transitionsBuilder: TransitionsBuilders.fadeIn,
     durationInMilliseconds: 200,
   )
   ThirdScreen thirdScreen;
