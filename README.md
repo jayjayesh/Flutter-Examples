@@ -22,11 +22,11 @@ Please refer to flutter official document [Install](https://flutter.dev/docs/get
 
 ### iOS  ||  android
 
-<img align="top" height="480px" src="screenshots/left_menu_ios.png"> <img align="top" height="420px" src="screenshots/left_menu_android.png">
+<img align="middle" height="480px" src="screenshots/left_menu_ios.png"> <img align="middle" height="420px" src="screenshots/left_menu_android.png">
 
 
-<img height="480px" src="screenshots/listview_expandable_ios.png"> <img height="420px" src="screenshots/listview_expandable_android.png">
+<img align="middle" height="480px" src="screenshots/listview_expandable_ios.png"> <img align="middle" height="420px" src="screenshots/listview_expandable_android.png">
 
 
-<img height="480px" src="screenshots/star_wars_planet_ios.png"> <img height="420px" src="screenshots/star_war_planet_android.png">
+<img align="middle" height="480px" src="screenshots/star_wars_planet_ios.png"> <img align="middle" height="420px" src="screenshots/star_war_planet_android.png">
 
