@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
       home: ChangeNotifierProvider(
         create: (context) => ArticleListViewModel(),
         child: HomePage(),
