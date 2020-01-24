@@ -22,7 +22,7 @@ Please refer to flutter official document [Install](https://flutter.dev/docs/get
 
 ### iOS  ||  android
 
-<img height="480px" src="https://github.com/jayjayesh/Git-Flutter-Examples/tree/master/screenshots/left_menu_ios.png">    <img height="480px" src="https://github.com/jayjayesh/Git-Flutter-Examples/tree/master/screenshots/left_menu_android.png">
+<img height="480px" src="screenshots/left_menu_ios.png">    <img height="360px" src="screenshots/left_menu_android.png">
 
 
-<img height="480px" src="screenshots/listview_expandable_ios.png">    <img height="480px" src="screenshots/listview_expandable_android.png">
+<img height="480px" src="screenshots/listview_expandable_ios.png">    <img height="360px" src="screenshots/listview_expandable_android.png">
