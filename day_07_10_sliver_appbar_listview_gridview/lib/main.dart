@@ -12,10 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       //home: HomeScreen(),
       //home: HomeSliverTableview(),
-      //home: HomeSliverGridView(),
-      home: HomePage(), //Represents AppLifeCycle
+      home: HomeSliverGridView(),
+      //home: HomePage(), //Represents AppLifeCycle
     );
   }
 }

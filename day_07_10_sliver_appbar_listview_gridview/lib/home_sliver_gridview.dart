@@ -9,7 +9,7 @@ class HomeSliverGridView extends StatefulWidget {
 class _HomeSliverGridViewState extends State<HomeSliverGridView> {
   var _urlNetworkImage =
       "https://www.linuxfoundation.org/wp-content/uploads/2016/12/lf_background_trees.jpg";
-  var _urlAvatarImage = "https://i.pravatar.cc/300";
+  var _urlAvatarImage = "https://i.pravatar.cc/302";
 
   void showImageLikeWhatsApp(int indexGridBox, String _urlAvatarImage) {
     Navigator.of(context).push(PageRouteBuilder(
@@ -28,11 +28,20 @@ class _HomeSliverGridViewState extends State<HomeSliverGridView> {
                   child: Container(
                     height: 300,
                     width: 300,
-                    child: Center(
+                    child: Container(
+                      // child: CachedNetworkImage(
+                      //   imageUrl: _urlAvatarImage,
+                      //   placeholder: (context, url) =>
+                      //       CircularProgressIndicator(),
+                      //   errorWidget: (context, url, error) => Icon(Icons.error),
+                      // ),
                       child: CachedNetworkImage(
                         imageUrl: _urlAvatarImage,
-                        placeholder: (context, url) =>
-                            CircularProgressIndicator(),
+                        placeholder: (_, __) => Center(
+                          child: CircularProgressIndicator(
+                            strokeWidth: 5,
+                          ),
+                        ),
                         errorWidget: (context, url, error) => Icon(Icons.error),
                       ),
                     ),
@@ -64,14 +73,15 @@ class _HomeSliverGridViewState extends State<HomeSliverGridView> {
             //alignment: Alignment.center,
             //color: Colors.teal[100 * (index % 9)],
             decoration: BoxDecoration(
-                // borderRadius: BorderRadius.circular(10.0),
-                // boxShadow: BoxShadow(
-                //   color: Colors.black,
-                //   offset: Offset(2, 2),
-                //   spreadRadius: 2,
-                //   blurRadius: 4,
-                // ),
-                ),
+              border: Border.all(width: 3, color: Colors.black),
+              borderRadius: BorderRadius.circular(10.0),
+              // boxShadow: BoxShadow(
+              //   color: Colors.black,
+              //   offset: Offset(2, 2),
+              //   spreadRadius: 2,
+              //   blurRadius: 4,
+              // ),
+            ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10.0),
               child: InkWell(
@@ -79,7 +89,8 @@ class _HomeSliverGridViewState extends State<HomeSliverGridView> {
                   tag: indexGridBox,
                   child: CachedNetworkImage(
                     imageUrl: _urlAvatarImage,
-                    placeholder: (context, url) => CircularProgressIndicator(),
+                    placeholder: (context, url) =>
+                        Center(child: CircularProgressIndicator()),
                     errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
                 ),
@@ -107,7 +118,7 @@ class _HomeSliverGridViewState extends State<HomeSliverGridView> {
             snap: false, //Shut on-off drasticly
             expandedHeight: 200,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text("News Article GridView"),
+              title: Text("GridView Title"),
               background: Image.network(
                 _urlNetworkImage,
                 fit: BoxFit.cover,
@@ -116,16 +127,19 @@ class _HomeSliverGridViewState extends State<HomeSliverGridView> {
           ),
           SliverToBoxAdapter(
             child: Container(
-              color: Colors.yellow,
+              color: Colors.orange,
               alignment: Alignment.centerLeft,
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Grid ViewD Header",
+                "Grid View Header",
                 style: Theme.of(context).textTheme.title,
               ),
             ),
           ),
-          getWidgetSliverGridView(),
+          SliverPadding(
+            padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
+            sliver: getWidgetSliverGridView(),
+          ),
         ],
       ),
     );
