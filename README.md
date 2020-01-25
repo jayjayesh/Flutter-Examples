@@ -26,6 +26,8 @@ Please refer to flutter official document [Install](https://flutter.dev/docs/get
 
 <img align="middle" height="480px" src="screenshots/simple_login_ios.png"> <img align="middle" height="420px" src="screenshots/simple_login_android.png">
 
+<img align="middle" height="480px" src="screenshots/simple_signup_ios.png"> <img align="middle" height="420px" src="screenshots/simple_signup_android.png">
+
 <img align="middle" height="480px" src="screenshots/listview_expandable_ios.png"> <img align="middle" height="420px" src="screenshots/listview_expandable_android.png">
 
 <img align="middle" height="480px" src="screenshots/grid_view_ios.png"> <img align="middle" height="420px" src="screenshots/grid_view_android.png">
