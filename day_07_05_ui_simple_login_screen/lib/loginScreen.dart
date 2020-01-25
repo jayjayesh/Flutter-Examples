@@ -11,12 +11,12 @@ class _LoginScreenState extends State<LoginScreen> {
       TextStyle(color: Colors.white, fontWeight: FontWeight.bold);
   final InputDecoration _inputDecorationEmail = InputDecoration(
       labelText: "Email",
-      hintText: "lathiyaJay@gmail.com",
+      //hintText: "lathiyaJay@gmail.com",
       hintStyle: TextStyle(color: Colors.grey),
       border: OutlineInputBorder());
   final InputDecoration _inputDecorationPassword = InputDecoration(
       labelText: "Password",
-      hintText: "madhubani@paintings1947",
+      //hintText: 'atleast 4 character'  //"madhubani@paintings1947",
       hintStyle: TextStyle(color: Colors.grey),
       border: OutlineInputBorder());
   double _nSizeBoxHeight = 15.0;
