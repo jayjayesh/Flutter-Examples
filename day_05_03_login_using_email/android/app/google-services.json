@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "145128048812",
+    "firebase_url": "https://flutterauthemail.firebaseio.com",
+    "project_id": "flutterauthemail",
+    "storage_bucket": "flutterauthemail.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145128048812:android:6cab8a6cc4d6cb921d3709",
+        "android_client_info": {
+          "package_name": "com.jayesh.day_05_03_login_using_email"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145128048812-42ijlh8n6t4m3grkfgok9la6c28pnkuv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jayesh.day_05_03_login_using_email",
+            "certificate_hash": "e8e21b84f4f8a2cd6098920bdddc0c9afc3b544a"
+          }
+        },
+        {
+          "client_id": "145128048812-nb8b31543rek8o43bp66c4hifu66ftgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWoJ9nQc8-BJxrvvj1jfKY5DkeMaM_ALk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145128048812-nb8b31543rek8o43bp66c4hifu66ftgo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
