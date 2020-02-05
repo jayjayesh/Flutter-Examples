@@ -81,9 +81,17 @@ class _RegisterPageState extends State<RegisterPage> {
     FirebaseAuth _auth = FirebaseAuth.instance;
 
     try {
-      AuthResult result = await _auth.createUserWithEmailAndPassword(
+      AuthResult _authResult = await _auth.createUserWithEmailAndPassword(
           email: email, password: pass);
-      FirebaseUser newUser = result.user;
+      //(STEP-1):(Register Screen):To identify (fack email) firebase send email-varification using below line. user not able to login untill he/she varify email
+      //_authResult.user.sendEmailVerification();
+      //(STEP-2):(Login Screen):Check if email varyfy then&then navigate to home_screen
+      //if(_authResult.user.isEmailVerified)
+      //{
+      // Navigate to Home Screen
+      //}
+
+      FirebaseUser newUser = _authResult.user;
 
       if (newUser != null) {
         UserUpdateInfo _info = UserUpdateInfo();

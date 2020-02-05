@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:bot_toast/bot_toast.dart';
 import 'package:day_05_03_login_using_email/screens/home_page.dart';
 import 'package:day_05_03_login_using_email/screens/register_page.dart';
