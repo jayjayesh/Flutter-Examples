@@ -37,6 +37,7 @@ class _DefaultVideoPlayerPageState extends State<DefaultVideoPlayerPage> {
             if (snapshot.connectionState == ConnectionState.done) {
               return AspectRatio(
                 aspectRatio: 16 / 9,
+                //aspectRatio: 3 / 2,
                 //aspectRatio: _vdoPlayerController.value.aspectRatio,
                 child: VideoPlayer(_vdoPlayerController),
               );

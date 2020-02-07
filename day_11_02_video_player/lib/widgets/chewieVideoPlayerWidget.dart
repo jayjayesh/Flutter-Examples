@@ -28,6 +28,8 @@ class _ChewieVideoPlayerWidgetState extends State<ChewieVideoPlayerWidget> {
     _chewieController = ChewieController(
       videoPlayerController: widget.videoPlayerController,
       aspectRatio: 16 / 9,
+      //aspectRatio: 3 / 2,
+      //aspectRatio: widget.videoPlayerController.value.aspectRatio,
       // Prepare the video to be played and display the first frame
       autoInitialize: true,
       looping: widget.looping,
