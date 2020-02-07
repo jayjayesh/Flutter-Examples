@@ -21,7 +21,8 @@ class App extends StatelessWidget {
   }
 }
 
-// TODO : must have to do this changes
+// TODO : must have to do these changes
+//—> videos can not play in iOS Simulator, you need real device
 
 /*
 
@@ -46,6 +47,21 @@ For iOS  : video player configuration
         <key>NSAllowsArbitraryLoads</key>
         <true/>
     </dict>
+
+*/
+
+//----------------------
+
+/*
+
+Google : search like this : ( video player in android ) ( video player in ios ) that tutorial contains streaming url link. 
+Sample video url = http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+Smaple video url = https://gist.github.com/jsturgis/3b19447b304616f18657
+
+
+Default Video Player
+iOS     = FLT VideoPlayer
+android = Exoplayer2 
 
 
 */
