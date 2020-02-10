@@ -19,6 +19,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^0.12.0+4
+  dio: ^3.0.8
+  alice: ^0.0.23
+  bot_toast: ^2.2.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
