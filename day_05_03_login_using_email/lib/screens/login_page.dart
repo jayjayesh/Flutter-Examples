@@ -2,10 +2,11 @@ import 'dart:async';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:day_05_03_login_using_email/screens/home_page.dart';
 import 'package:day_05_03_login_using_email/screens/register_page.dart';
+import 'package:day_05_03_login_using_email/service/firebase_auth_service.dart';
 import 'package:day_05_03_login_using_email/utils/connection_singleton.dart';
 import 'package:day_05_03_login_using_email/utils/constants.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
   static const String routName = 'LoginPage';
@@ -94,24 +95,12 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  Future<FirebaseUser> firebaseLoginWith(
-      {@required String email, @required String pass}) async {
-    FirebaseAuth _auth = FirebaseAuth.instance;
-
-    try {
-      AuthResult result =
-          await _auth.signInWithEmailAndPassword(email: email, password: pass);
-      FirebaseUser loggedinUser = result.user;
-      return loggedinUser;
-    } catch (err) {
-      _showSnackBarWithText(text: err.message, fillColor: Colors.red);
-      return null;
-    }
-  }
-
 //--------------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
+    FirebaseAuthService firebaseAuthServiceProviderObjc =
+        Provider.of<FirebaseAuthService>(context, listen: false);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Login'),
@@ -189,8 +178,9 @@ class _LoginPageState extends State<LoginPage> {
                         return;
                       }
                       BotToast.showLoading();
-                      FirebaseUser loggedInUser = await firebaseLoginWith(
-                          email: _inputEmail, pass: _inputPassword);
+                      User loggedInUser = await firebaseAuthServiceProviderObjc
+                          .firebaseLoginWith(
+                              email: _inputEmail, pass: _inputPassword);
                       BotToast.closeAllLoading();
                       if (loggedInUser != null) {
                         HomePageArguments arg = HomePageArguments(

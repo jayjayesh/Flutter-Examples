@@ -1,7 +1,8 @@
 import 'package:day_05_03_login_using_email/screens/login_page.dart';
+import 'package:day_05_03_login_using_email/service/firebase_auth_service.dart';
 import 'package:day_05_03_login_using_email/utils/constants.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   static const String routName = 'HomePage';
@@ -15,31 +16,32 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  _sighoutButtonClicked() {
-    try {
-      FirebaseAuth.instance.signOut();
-      _cleareTempDataOfSignedoutUser();
-    } catch (err) {
-      throw Exception('fail to signout');
-    }
-  }
-
   _cleareTempDataOfSignedoutUser() {
     // Navigator.popUntil(
     //     context, ModalRoute.withName(Navigator.defaultRouteName));
-    //Navigator.pushReplacementNamed(context, LoginPage.routName);
+    Navigator.pushReplacementNamed(context, LoginPage.routName);
   }
 
   @override
   Widget build(BuildContext context) {
+    FirebaseAuthService firebaseAuthServiceProviderObjc =
+        Provider.of<FirebaseAuthService>(context, listen: false);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Screen'),
         actions: <Widget>[
           FlatButton(
-            textColor: Colors.white,
-            onPressed: _sighoutButtonClicked(),
             child: Text("Logout"),
+            textColor: Colors.white,
+            onPressed: () async {
+              bool result =
+                  await firebaseAuthServiceProviderObjc.sighoutButtonClicked();
+              if (result == true) {
+                _cleareTempDataOfSignedoutUser();
+              }
+            },
+
             //By setting the shape property to CircleBorder, we get a nicer effect for the pressed state.
             shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
           ),
@@ -53,7 +55,7 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
-                'You are logged in /n Successfully',
+                'You are logged in \nSuccessfully',
                 style: Constants.textStyleLoggedInSuccessfully,
               ),
               SizedBox(height: Constants.heightBetweenWidgets),

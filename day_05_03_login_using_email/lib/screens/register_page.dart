@@ -1,7 +1,8 @@
 import 'package:day_05_03_login_using_email/screens/home_page.dart';
+import 'package:day_05_03_login_using_email/service/firebase_auth_service.dart';
 import 'package:day_05_03_login_using_email/utils/constants.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class RegisterPage extends StatefulWidget {
   static const String routName = 'RegisterPage';
@@ -73,45 +74,12 @@ class _RegisterPageState extends State<RegisterPage> {
     }
   }
 
-  Future<FirebaseUser> firebaseRegisterNewUserWith({
-    String username,
-    String email,
-    String pass,
-  }) async {
-    FirebaseAuth _auth = FirebaseAuth.instance;
-
-    try {
-      AuthResult _authResult = await _auth.createUserWithEmailAndPassword(
-          email: email, password: pass);
-      //(STEP-1):(Register Screen):To identify (fack email) firebase send email-varification using below line. user not able to login untill he/she varify email
-      //_authResult.user.sendEmailVerification();
-      //(STEP-2):(Login Screen):Check if email varyfy then&then navigate to home_screen
-      //if(_authResult.user.isEmailVerified)
-      //{
-      // Navigate to Home Screen
-      //}
-
-      FirebaseUser newUser = _authResult.user;
-
-      if (newUser != null) {
-        UserUpdateInfo _info = UserUpdateInfo();
-        _info.displayName = username;
-        //Set it to newUser
-        newUser.updateProfile(_info);
-        return newUser;
-      } else {
-        _showSnackBarWithText(text: 'fail to register', fillColor: Colors.red);
-        return null;
-      }
-    } catch (err) {
-      _showSnackBarWithText(text: err.message, fillColor: Colors.red);
-      return null;
-    }
-  }
-
   //--------------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
+    FirebaseAuthService firebaseAuthServiceProviderObjc =
+        Provider.of<FirebaseAuthService>(context, listen: false);
+
     return Scaffold(
       appBar: AppBar(title: Text('Signup')),
       body: Builder(
@@ -199,8 +167,8 @@ class _RegisterPageState extends State<RegisterPage> {
                         print('save typedTextField text into string variables');
                         _formKey.currentState.save();
                         print('proceed for registration');
-                        FirebaseUser newUser =
-                            await firebaseRegisterNewUserWith(
+                        User newUser = await firebaseAuthServiceProviderObjc
+                            .firebaseRegisterNewUserWith(
                           email: _inputEmail,
                           pass: _inputPassword,
                           username: _inputUserName,

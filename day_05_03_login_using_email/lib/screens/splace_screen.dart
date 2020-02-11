@@ -2,9 +2,10 @@ import 'dart:async';
 
 import 'package:day_05_03_login_using_email/screens/home_page.dart';
 import 'package:day_05_03_login_using_email/screens/login_page.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:day_05_03_login_using_email/service/firebase_auth_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String routeName = 'SplashScreen';
@@ -18,6 +19,7 @@ class SplashScreenState extends State<SplashScreen>
   var _visible = true;
   var _visibleActivityIndicator = false;
   int splaceScreenLogoAnimationForSeconds = 3;
+  FirebaseAuthService firebaseAuthServiceProviderObjc;
 
   AnimationController animationController;
   Animation<double> animation;
@@ -36,7 +38,7 @@ class SplashScreenState extends State<SplashScreen>
       _visibleActivityIndicator = true;
     });
 
-    FirebaseUser currentUser = await isUserLoggedIn();
+    User currentUser = await firebaseAuthServiceProviderObjc.isUserLoggedIn();
     if (currentUser != null) {
       HomePageArguments arg = HomePageArguments(
           displayName: currentUser.displayName, emailId: currentUser.email);
@@ -46,12 +48,6 @@ class SplashScreenState extends State<SplashScreen>
     } else {
       Navigator.of(context).pushReplacementNamed(LoginPage.routName);
     }
-  }
-
-  Future<FirebaseUser> isUserLoggedIn() async {
-    FirebaseAuth _auth = FirebaseAuth.instance;
-    FirebaseUser loggedInCurrentUser = await _auth.currentUser();
-    return loggedInCurrentUser;
   }
 
   @override
@@ -74,6 +70,9 @@ class SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    firebaseAuthServiceProviderObjc =
+        Provider.of<FirebaseAuthService>(context, listen: false);
+
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
