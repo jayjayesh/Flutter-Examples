@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage> {
 //--------- build method end here ------------------
 
   StreamBuilder<List<TaskTable>> _buildListView(BuildContext context) {
+    //NOTE: Do not forget to set (listen: false) otherwise Provider will mesh-up Programe_counter, and code will no longer excecute further more
     final taskTableDaoObjc = Provider.of<TaskTableDao>(context, listen: false);
 
     return StreamBuilder(

@@ -46,6 +46,7 @@ class _InputBoxState extends State<InputBox> {
           controller: txtController,
           decoration: Constants.inputDecorationNewTask,
           onSubmitted: (newTypedText) {
+            //NOTE: Do not forget to set (listen: false) otherwise Provider will mesh-up Programe_counter, and code will no longer excecute further more
             final taskTableDaoObjc =
                 Provider.of<TaskTableDao>(context, listen: false);
             final newTaskObjc = TaskTablesCompanion(
