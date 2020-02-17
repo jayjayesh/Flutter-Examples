@@ -54,3 +54,22 @@ class _HomeScreenTopTabBarState extends State<HomeScreenTopTabBar>
     );
   }
 }
+
+/*
+
+---------------------------
+How to implement TopTabBar (under navigationBar)
+----------------------------
+List<Tab> _tabs
+List<Widget> _pages
+TabController _tabController
+
+Column(
+	children: [
+		TabBar ( controller: _tabController, tabs: _tabs,  )
+		TabBarView( controller: _tabController,  children: _pages )
+	]
+)
+----------------------------
+
+*/
