@@ -29,7 +29,7 @@ class TaskTables extends Table {
 // Set<Column> get myprimarykey => (id, name);
 
 //(NOTE-4) :
-// must have following dependency inside your pubspect.yaml file
+// must have following dependencı inside your pubspect.yaml file
 // (moor: ^1.4.0)
 // (moor_flutter: ^1.4.0)
 // (moor_generator: ^2.4.0)
