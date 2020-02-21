@@ -1,5 +1,4 @@
 import 'package:day_16_01_mobx_default_app/screens/home_page.dart';
-import 'package:day_16_01_mobx_default_app/screens/movie_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -12,8 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MoviePage(),
-      //home: HomePage(),
+      home: HomePage(),
     );
   }
 }

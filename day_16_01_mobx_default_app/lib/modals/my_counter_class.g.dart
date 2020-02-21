@@ -8,8 +8,8 @@ part of 'my_counter_class.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$MyCounterClass on _MyCounterClass, Store {
-  final _$counterAtom = Atom(name: '_MyCounterClass.counter');
+mixin _$MyCounterClass on _MyCounterClassStore, Store {
+  final _$counterAtom = Atom(name: '_MyCounterClassStore.counter');
 
   @override
   int get counter {
@@ -26,16 +26,16 @@ mixin _$MyCounterClass on _MyCounterClass, Store {
     }, _$counterAtom, name: '${_$counterAtom.name}_set');
   }
 
-  final _$_MyCounterClassActionController =
-      ActionController(name: '_MyCounterClass');
+  final _$_MyCounterClassStoreActionController =
+      ActionController(name: '_MyCounterClassStore');
 
   @override
   void increamentMethod() {
-    final _$actionInfo = _$_MyCounterClassActionController.startAction();
+    final _$actionInfo = _$_MyCounterClassStoreActionController.startAction();
     try {
       return super.increamentMethod();
     } finally {
-      _$_MyCounterClassActionController.endAction(_$actionInfo);
+      _$_MyCounterClassStoreActionController.endAction(_$actionInfo);
     }
   }
 
