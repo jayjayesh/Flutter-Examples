@@ -16,11 +16,11 @@ class Planet {
   });
 
   factory Planet.fromJson(Map<String, dynamic> json) => Planet(
-        name: json['name'],
-        climate: json['climate'],
-        terrain: json['terrain'],
-        gravity: json['gravity'],
-        population: json['population'],
-        diameter: int.parse(json['diameter']),
+        name: json['name'] ?? 'No Name Found',
+        climate: json['climate'] ?? 'No Climate Found',
+        terrain: json['terrain'] ?? 'No Terrain Found',
+        gravity: json['gravity'] ?? 'No Gravity Found',
+        population: json['population'] ?? 'No Poppulation Found',
+        diameter: int.parse(json['diameter']) ?? 0,
       );
 }

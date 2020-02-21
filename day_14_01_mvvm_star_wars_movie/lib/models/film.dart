@@ -22,10 +22,10 @@ class Film {
   });
 
   factory Film.fromJson(Map<String, dynamic> json) => Film(
-        title: json["title"],
-        openingCrawl: json["opening_crawl"],
-        director: json["director"],
-        producer: json["producer"],
-        releaseDate: DateTime.parse(json["release_date"]),
+        title: json["title"] ?? 'No Title Found',
+        openingCrawl: json["opening_crawl"] ?? 'No Crawl Found',
+        director: json["director"] ?? 'No Director Name Found',
+        producer: json["producer"] ?? 'No Producer Name Found',
+        releaseDate: DateTime.parse(json["release_date"]) ?? DateTime.now(),
       );
 }
