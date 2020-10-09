@@ -10,6 +10,8 @@ class _HomeSliverGridViewState extends State<HomeSliverGridView> {
   var _urlNetworkImage =
       "https://www.linuxfoundation.org/wp-content/uploads/2016/12/lf_background_trees.jpg";
   var _urlAvatarImage = "https://i.pravatar.cc/302";
+  var _urlAvatarImage_every_time_new = "https://i.pravatar.cc/150?img=5";
+  
 
   void showImageLikeWhatsApp(int indexGridBox, String _urlAvatarImage) {
     Navigator.of(context).push(PageRouteBuilder(
